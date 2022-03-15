@@ -1,53 +1,78 @@
 * {
+    box-sizing: border-box;
+
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
 body {
+    height: 100vh;
+    /* background: linear-gradient(#CF2425, black, red); */
+    background-image: url(./background-spider.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(#CF2425, black, red)
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* header */
 
 header {
     height: 80px;
     padding-top: 40px;
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: aqua; */
 }
 
 .logo {
     height: 50px;
 }
 
+li, a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+/* nav bar */
+
 nav {
     display: flex;
-    gap: 5px;
-    align-items: center;
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
-    font-size: 25px;
-    color: white;
-}
-
-ul, li {
-    list-style: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    gap: 15px;
 }
 
 ul li {
-    border: 3px black solid;
-    padding: 5px;
-    border-radius: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.menu-item {
+    transition: 400ms;
+}
+
+.menu-item:hover {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #2f4f4f;
+    border: #000 solid 3px;
+}
+
+/* main */
 
 main {
     display: flex;
@@ -56,57 +81,97 @@ main {
     justify-content: center;
     padding-top: 20px;
     flex-grow: 1;
-    /* background-color: aqua; */
+
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+h1, h4 {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h1 {
-    font-size: 45px;
+    font-size: 40px;   
 }
 
-.txt, .details {
-    font-size: 18px;
+h4 {
+    font-size: 15px;
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 50px;
-    font-style: italic;
-    color: white;
+.title {
+    background-color: tomato;
+
+    border: #000 solid 3px;
+    border-radius: 15px;
+    padding: 7px;
+    transition: 400ms;
 }
 
-h1, .txt, .details {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-decoration: none;
-    color: white;
-}
-
-.imgcontainer {
-    padding-top: 20px;
-}
-
-.txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    padding-top: 20px;
-    padding-left: 180px;
-    padding-right: 180px;
-    /* background-color: blue; */
+.title:hover {
+    background-color: #778899;
 }
 
 .details {
-    padding-top: 20px;
+    text-align: center;
+
+    border: #000 solid 3px;
+    border-radius: 15px;
+    background-color: tomato;
+    transition: 400ms;
 }
+
+.details:hover {
+    text-align: center;
+    border: #000 solid 3px;
+    border-radius: 15px;
+    background-color: #778899;
+}
+
+div {
+    padding-top: 25px;
+}
+
+.more-dtls {
+    transition: 400ms;
+
+    border: #000 solid 3px;
+    border-radius: 15px;
+    padding: 3px;
+    background-color: tomato;
+}
+
+.more-dtls:hover {
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #778899;
+    border: #000 solid 3px;
+}
+
+/* img */
 
 .spiderman {
-    width: 380px;
+    background-color: tomato;
+
+    border: #000 solid 3px;
+    border-radius: 15px;
+    transition: 400ms;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 220);
+.spiderman:hover {
+    border: #000 solid 3px;
+    border-radius: 15px;
+    background-color: #778899;
+}
+/* footer */
+
+footer {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    font-style: italic;
 }
